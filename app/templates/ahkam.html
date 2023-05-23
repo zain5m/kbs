@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>الأحكام</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/bootstrap-rtl.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/ionicons.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/skin-blue.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/font-awesome-rtl.min.css') }}">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+
+</head>
+<body >
+<table class="table table-bordered" >
+
+    <thead>
+
+  </thead>
+  <thead>
+    <tr>
+     <th >#</th>
+     <th >{{aya}}</th>
+    </tr>
+    <tr>
+      <th >#</th>
+      <th >نوع الحكم</th>
+      <th >المواضع</th>
+    </tr>
+  </thead>
+  <tbody>
+  <p style="background-image: url({{url_for('static',filename='photos/q.jpg')}});">
+  {% for key,value in data.items() %}
+    <tr>
+      <th >1</th>
+      <td>{{key}}</td>
+      <td>{{value}}</td>
+    </tr>
+ {% endfor %}
+  </tbody>
+</table>
+</body>
+</html>
